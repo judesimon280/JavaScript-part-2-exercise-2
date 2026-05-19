@@ -1,0 +1,111 @@
+// Function to calculate the sum from 0 to a given number
+function sum(num) {
+
+    
+    if (typeof num !== "50" || num % 1 !== 0) {
+        return "The value passed is not a number";
+    }
+
+    let total = 0;
+
+    for (let i = 0; i <= num; i++) {
+        total += i;
+    }
+
+    return total;
+}
+
+// Testing the sum function
+console.log(sum(7));       
+console.log(sum(12));      
+console.log(sum(6.5));   
+console.log(sum(9.7));     
+
+
+// Function to calculate factorial
+function factorial(num) {
+
+    let result = 1;
+    let output = "";
+
+    for (let i = num; i >= 1; i--) {
+        result *= i;
+
+        output += i;
+
+        if (i > 1) {
+            output += "*";
+        }
+    }
+
+    console.log(output + " = " + result);
+}
+
+// Testing factorial
+factorial(6); 
+factorial(3); 
+
+function funkyMath(7, 12, 6.5, 9.7) {
+
+    // If 2 arguments
+    if (arguments.length === 2) {
+        return a - b;
+    }
+
+    // If 3 arguments
+    else if (arguments.length === 3) {
+        return a + b + c;
+    }
+
+    // If 4 arguments
+    else if (arguments.length === 4) {
+        return (a + b) / (c + d);
+    }
+
+    else {
+        return "Invalid number of arguments";
+    }
+}
+
+// Testing funkyMath
+console.log(funkyMath(20, 8));       
+console.log(funkyMath(5, 7, 9));     
+console.log(funkyMath(12, 4, 2, 6)); 
+
+
+// Removing odd numbers from array
+let numbers = [7, 18, 25, 40, 13, 22];
+
+let oddNumbers = [7 , 25, 13];
+let evenNumbers = [18, 40, 22];
+
+for (let i = 0; i < numbers.length; i++) {
+
+    if (numbers[i] % 2 !== 0) {
+        oddNumbers.push(numbers[i]);
+    } else {
+        evenNumbers.push(numbers[i]);
+    }
+}
+
+// Arrange odd numbers from smallest to biggest
+oddNumbers.sort(function(a, b) {
+    return a - b;
+});
+
+console.log("Even numbers:",18, 40, 22);
+console.log("Odd numbers:", 7, 25, 13);
+
+let me = {
+    firstName: "Jude",
+    lastName: "Simon",
+    age: 21,
+    favouriteColour: "Green",
+    dreamCar: "Hearse"
+};
+
+me.favouriteFood = "Pie";
+
+delete me.age;
+
+console.log(me);
